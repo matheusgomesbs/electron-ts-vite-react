@@ -63,6 +63,7 @@ Mencione as ferramentas que você usou para criar seu projeto
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 * [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
 * [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+* [Prisma](https://www.prisma.io/) - Next-generation Node.js and TypeScript ORM
 
 ## 🖇️ Colaborando
 
@@ -75,6 +76,7 @@ Versão 0.0.0
 ## ✒️ Autores
 
 * **Matheus Gomes** - [matheusgomesbs](https://github.com/matheusgomesbs)
+* **Tasin Ishmam** - [TasinIshmam](https://github.com/TasinIshmam) - Utilizei o seu exemplo do repositório "prisma-electron-test" para implementar o Prisma
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/matheusgomesbs/electron-ts-vite-react/colaboradores) que participaram deste projeto.
 
