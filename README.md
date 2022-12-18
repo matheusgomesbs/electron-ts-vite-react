@@ -2,6 +2,8 @@
 
 Boilerplate utilizando Electron + Vite + React + Typescript
 
+![image](https://user-images.githubusercontent.com/11359652/208282512-074a79c2-0643-4ba4-96f2-b1c972568c20.png)
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento.
