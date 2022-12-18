@@ -5,6 +5,21 @@
     "paths": {
       "@/*": [
         "packages/vite/src/*"
+      ],
+      "@modules/*": [
+        "packages/modules/*"
+      ],
+      "@config/*": [
+        "packages/config/*"
+      ],
+      "@shared/*": [
+        "packages/shared/*"
+      ],
+      "@errors/*": [
+        "packages/errors/*"
+      ],
+      "@utils/*": [
+        "packages/utils/*"
       ]
     }
   }

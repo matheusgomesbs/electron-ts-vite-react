@@ -12,9 +12,21 @@ module.exports = {
     buildResources: "resources",
   },
   extraResources: [
-    "./resources/**"
+    "./resources/**/*",
+    "packages/electron/shared/infra/prisma/dev.db",
+    "node_modules/.prisma/**/*",
+    "node_modules/@prisma/client/**/*"
   ],
-  files: ["dist"],
+  files: [
+    "dist"
+  ],
+  publish: [
+    {
+      provider: "github",
+      owner: "matheusgomesbs",
+      repo: "electron-ts-vite-react"
+    }
+  ],
   win: {
     target: [
       {

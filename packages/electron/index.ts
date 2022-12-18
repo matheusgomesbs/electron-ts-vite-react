@@ -3,6 +3,7 @@ import { release } from "os";
 import path from "path";
 
 import pkg from "../../package.json";
+import { routesUser } from "./modules/user";
 
 // Desativar aceleração de GPU para Windows 7
 if (release().startsWith("6.1")) app.disableHardwareAcceleration();
@@ -27,6 +28,8 @@ async function createWindow() {
       preload: path.join(__dirname, "../preload/index.cjs"),
     },
   });
+
+  routesUser(win);
 
   win.setTitle(pkg.productName);
 
@@ -74,6 +77,7 @@ async function createWindow() {
 
 app.whenReady().then(createWindow).then(async () => {
   // Executar no aplicativo estiver criado o janela principal
+
 });
 
 app.on("window-all-closed", () => {

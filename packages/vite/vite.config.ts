@@ -3,6 +3,7 @@ import { builtinModules } from "module";
 import { join } from "path";
 import { defineConfig, Plugin } from "vite";
 import optimizer from "vite-plugin-optimizer";
+
 import pkg from "../../package.json";
 
 /**
@@ -23,10 +24,8 @@ export default defineConfig({
        *   'electron-store': 'const Store = require("electron-store"); export default Store;',
        * }
        */
-
       {
-        'electron-store': 'const Store = require("electron-store"); export default Store;',
-      }
+      },
     ),
   ],
   base: "./",
