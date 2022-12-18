@@ -44,7 +44,7 @@ export default defineConfig({
 });
 
 /**
- * For usage of Electron and NodeJS APIs in the Renderer process
+ * Para uso de APIs Electron e NodeJS no processo de renderização
  * @see https://github.com/caoxiemeihao/electron-vue-vite/issues/52
  */
 export function resolveElectron(

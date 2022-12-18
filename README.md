@@ -1,17 +1,21 @@
 # electron-ts-vite-react
 
-Um boilerplate utilizando Electron + Vite + React + Typescript
+Boilerplate utilizando Electron + Vite + React + Typescript
 
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento.
+
+```
+git clone https://github.com/matheusgomesbs/electron-ts-vite-react.git
+```
 
 ### 📋 Pré-requisitos
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 
 ```
-Yarn => Caso não utilize o yarn substituia no package.json
+Yarn => Caso não utilize o yarn substituía no package.json
 ```
 
 ### 🔧 Instalação
