@@ -81,10 +81,3 @@ Você também pode ver a lista de todos os [colaboradores](https://github.com/ma
 ## 📄 Licença
 
 Este projeto está sob a licença (MIT) - veja o arquivo [LICENSE.md](https://github.com/matheusgomesbs/electron-ts-vite-react/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
