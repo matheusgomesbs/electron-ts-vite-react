@@ -59,7 +59,7 @@ Veja o exemplo que esta dentro de "modules/user", para criar módulos com as
 funcionalidades que deseja. Para expor seus módulos utilize o arquivo "context.ts" que esta dentro da pasta "preload".
 
 Exemplo: 
-```
+```typescript
 // electron/modules/teste/index.ts
 import { BrowserWindow, ipcMain } from "electron";
 
@@ -72,7 +72,7 @@ const testModule = async (window: BrowserWindow | null) => {
 export { testModule };
 ```
 Adicione a chamada ao modulo:
-```
+```typescript
 // electron/modules/index.ts
 import { BrowserWindow } from "electron";
 
@@ -85,7 +85,7 @@ export const useModules = (window: BrowserWindow | null) => {
 }
 ```
 Cre a chamada da API ao modulo:
-```
+```typescript
 // preload/context.ts
 import { ipcRenderer } from "electron";
 
@@ -105,7 +105,7 @@ export const electronContext: IElectronRendererContext = {
 ```
 
 Execute a chamada da API no seu front-end:
-```
+```typescript
 import React from "react";
 
 const App = () => {
