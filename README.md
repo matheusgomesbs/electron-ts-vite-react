@@ -54,6 +54,75 @@ Gerar executável para distribuição.
 yarn dist
 ```
 
+## 📦 Implantação
+Veja o exemplo que esta dentro de "modules/user", para criar módulos com as
+funcionalidades que deseja. Para expor seus módulos utilize o arquivo "context.ts" que esta dentro da pasta "preload".
+
+Exemplo: 
+```
+// electron/modules/teste/index.ts
+import { BrowserWindow, ipcMain } from "electron";
+
+const testModule = async (window: BrowserWindow | null) => {
+  ipcMain.handle('test-module', async (event, args) => {
+    return window?.setTitle("test title changed");
+  });
+}
+
+export { testModule };
+```
+Adicione a chamada ao modulo:
+```
+// electron/modules/index.ts
+import { BrowserWindow } from "electron";
+
+import { userModule } from "@modules/user";
+import { testModule } from "./teste";
+
+export const useModules = (window: BrowserWindow | null) => {
+  userModule(window);
+  testModule(window);
+}
+```
+Cre a chamada da API ao modulo:
+```
+// preload/context.ts
+import { ipcRenderer } from "electron";
+
+export interface IElectronRendererContext {
+  getUsers(): Promise<string[]>;
+  testeModule(): Promise<void>;
+}
+
+export const electronContext: IElectronRendererContext = {
+  getUsers: async function (): Promise<string[]> {
+    return await ipcRenderer.invoke('list-users');
+  },
+  testeModule: async function (): Promise<void> {
+    return await ipcRenderer.invoke('test-module');
+  }
+}
+```
+
+Execute a chamada da API no seu front-end:
+```
+import React from "react";
+
+const App = () => {
+  async function testeModule() {
+    return await window.electronContext.testeModule();
+  }
+
+  return (
+    <div>
+      <h1>Hello world!</h1>
+      <button onClick={testeModule}>Mudar titulo</button>
+    </div>
+  );
+};
+
+export default App;
+```
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
