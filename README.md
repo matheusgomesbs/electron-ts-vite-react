@@ -76,7 +76,8 @@ Versão 0.0.0
 ## ✒️ Autores
 
 * **Matheus Gomes** - [matheusgomesbs](https://github.com/matheusgomesbs)
-* **Tasin Ishmam** - [TasinIshmam](https://github.com/TasinIshmam) - Utilizei o seu exemplo do repositório "prisma-electron-test" para implementar o Prisma
+* **Tasin Ishmam**- *Exemplo de implementação do Prima* - [TasinIshmam](https://github.com/TasinIshmam)
+* **YeonV** - *Projeto Base* - [YeonV](https://github.com/YeonV/Vitron)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/matheusgomesbs/electron-ts-vite-react/colaboradores) que participaram deste projeto.
 
