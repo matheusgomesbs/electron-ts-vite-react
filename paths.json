@@ -7,19 +7,22 @@
         "packages/vite/src/*"
       ],
       "@modules/*": [
-        "packages/modules/*"
+        "packages/electron/modules/*"
       ],
       "@config/*": [
-        "packages/config/*"
+        "packages/electron/config/*"
       ],
       "@shared/*": [
-        "packages/shared/*"
+        "packages/electron/shared/*"
       ],
       "@errors/*": [
-        "packages/errors/*"
+        "packages/electron/errors/*"
       ],
       "@utils/*": [
-        "packages/utils/*"
+        "packages/electron/utils/*"
+      ],
+      "@preload/*": [
+        "packages/preload/*"
       ]
     }
   }

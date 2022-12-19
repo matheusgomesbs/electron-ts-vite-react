@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => {
   async function showTeste() {
-    return window.ipcRenderer && window.ipcRenderer.invoke('list-users');
+    return await window.electronContext.getUsers();
   }
 
   React.useEffect(() => {

@@ -1,6 +1,7 @@
-import { contextBridge, ipcRenderer } from "electron";
+import { contextBridge } from "electron";
 import fs from "fs";
 
+import { electronContext } from "./context";
 import { useLoading } from "./loading";
 import { domReady } from "./utils";
 
@@ -14,8 +15,9 @@ const { appendLoading, removeLoading } = useLoading();
 // --------- Expor alguma API do Electron para o Vite. ---------
 contextBridge.exposeInMainWorld("fs", fs);
 contextBridge.exposeInMainWorld("removeLoading", removeLoading);
-contextBridge.exposeInMainWorld("ipcRenderer", withPrototype(ipcRenderer));
+contextBridge.exposeInMainWorld("electronContext", withPrototype(electronContext));
 
+// contextBridge.exposeInMainWorld("ipcRenderer", withPrototype(ipcRenderer));
 // `exposeInMainWorld` não pode detectar atributos e métodos de `prototype`, corrigindo manualmente.
 function withPrototype(obj: Record<string, any>) {
   const protos = Object.getPrototypeOf(obj);
