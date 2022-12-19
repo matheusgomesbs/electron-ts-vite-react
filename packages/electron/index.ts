@@ -3,7 +3,7 @@ import { release } from "os";
 import path from "path";
 
 import pkg from "../../package.json";
-import { routesUser } from "./modules/user";
+import { useModules } from "./modules";
 
 // Desativar aceleração de GPU para Windows 7
 if (release().startsWith("6.1")) app.disableHardwareAcceleration();
@@ -29,7 +29,7 @@ async function createWindow() {
     },
   });
 
-  routesUser(win);
+  useModules(win);
 
   win.setTitle(pkg.productName);
 
@@ -106,3 +106,6 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+export { BrowserWindow };
+

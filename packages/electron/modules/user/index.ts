@@ -1,13 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@config/prisma";
 import { BrowserWindow, ipcMain } from "electron";
 
-const prisma = new PrismaClient();
 
-const routesUser = async (window: BrowserWindow | null) => {
+const userModule = async (window: BrowserWindow | null) => {
   ipcMain.handle('list-users', async (event, args) => {
     return await prisma.user.findMany();
   });
 }
 
-export { routesUser };
+export { userModule };
 

@@ -10,7 +10,7 @@
         "packages/electron/modules/*"
       ],
       "@config/*": [
-        "packages/electron/config/*"
+        "./packages/electron/config/*"
       ],
       "@shared/*": [
         "packages/electron/shared/*"

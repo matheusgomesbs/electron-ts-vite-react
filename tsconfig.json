@@ -9,7 +9,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "strict": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
   },
   "extends": "./paths.json",
   "exclude": [

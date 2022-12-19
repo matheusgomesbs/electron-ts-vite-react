@@ -1,4 +1,5 @@
 import { builtinModules } from "module";
+import { join } from "path";
 import { defineConfig } from "vite";
 
 import pkg from "../../package.json";
@@ -20,6 +21,12 @@ export default defineConfig({
         ...builtinModules,
         ...Object.keys(pkg.dependencies || {}),
       ],
+    },
+  },
+  resolve: {
+    alias: {
+      "@config": join(__dirname, "config"),
+      "@modules": join(__dirname, "modules"),
     },
   },
 })
